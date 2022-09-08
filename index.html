@@ -4,9 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Today is</title>
   </head>
-  <body>
-    <h1>Today is</h1>
+  <body onload="updateClock()">
+    <div class="datetime">
+      <div class="date">
+        <span id="month">Month <span>,</span></span>
+        <span id="daynum">00</span>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      function updateClock() {
+        var now = new Date();
+        var mo = now.getMonth(),
+          dnum = now.getDate();
+
+        var months = [
+          "Janyary",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ];
+        var ids = ["month", "daynum"];
+        var values = [months[mo], dnum];
+        for (var i = 0; i < ids.length; i++)
+          document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+      }
+    </script>
   </body>
 </html>
