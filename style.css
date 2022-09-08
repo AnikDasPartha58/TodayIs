@@ -4,7 +4,7 @@
 }
 
 body{
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +12,9 @@ body{
 }
 
 .datetime{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #2E94E3;
     background: antiquewhite;
     font-family: 'Segoe UI' , sans-serif;
